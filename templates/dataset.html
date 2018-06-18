@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DATASET UPLOAD</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheet_dataset.css') }}">
+
+</head>
+<body bgcolor="hsl(0, 0%, 0%)">
+
+
+
+<div class="container">
+    <form action="http://localhost:5000/train" method="POST" enctype='multipart/form-data'>
+        <div class="container">
+            <p>Data agnostic Classifier</p>
+            <hr/>
+            <div class="row">
+                <div class="col-25">
+                    <label>Enter feature name:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="feature">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label>Enter label name:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="label">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label>Enter model name:</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="filename">
+                </div>
+            </div>
+            <hr/>
+            <label>File: <input name="myFile" type="file"/></label>
+            <input type="reset" value="Reset"/>
+            <input type="submit" value="OK"/>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
+
+
+

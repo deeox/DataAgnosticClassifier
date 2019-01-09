@@ -59,9 +59,6 @@ python3 -m spacy download en
 	```
 	
 2. After the program is successfully running, go to ```http://localhost:5000/``` in your preferred browser.
-You must be able to see the following screen:
-
-![Pic1.png](https://bitbucket.org/repo/Mrep4aL/images/3851008729-Pic1.png)
 
 ### Sample Run
 
@@ -82,17 +79,17 @@ The sameple dataset looks like the following:
 Now assuming the application is running, let us proceed:
 
 ***Step 1:*** Upload labelled dataset in **.csv** format to train the model. Enter the feature name and label (Here, "Consumer_complaint_narrative" and "Product" respectively). Enter the name by which your trained model should be saved. Finally, Click the ```Train``` button. 
-![Screenshot1.png](https://bitbucket.org/repo/Mrep4aL/images/1951300499-Screenshot1.png)
+![Screenshot1.png](https://user-images.githubusercontent.com/23413000/50923779-d3e05600-1473-11e9-8def-ec472a9f8e92.png)
 The loading screen appears till the models are trained.
 
 ***Step 2:*** The accuracy table of the classifiers. The classifier with best accuracy is automatically chosen and is saved as a model with the name given in previous step.
-![Screenshot2.png](https://bitbucket.org/repo/Mrep4aL/images/4278194869-Screenshot2.png)
+![Screenshot2.png](https://user-images.githubusercontent.com/23413000/50923889-068a4e80-1474-11e9-86fe-aaca89d4c455.png)
 
 ***Step 3:*** Upload unlabelled dataset in **.csv** format to predict the labels. Enter the feature name in the unlabelled file whose label have to be predicted. Next, input the filename of the saved model. Then enter the filename of file in which results are going to be saved. Click OK. 
-![Screenshot3.png](https://bitbucket.org/repo/Mrep4aL/images/2053624400-Screenshot3.png)
+![Screenshot3.png](https://user-images.githubusercontent.com/23413000/50923891-08541200-1474-11e9-8cc6-d7d8c3118615.png)
 
 ***Step 4:*** The results are displayed in the following format:
-![Screenshot4.png](https://bitbucket.org/repo/Mrep4aL/images/1116904224-Screenshot4.png)
+![Screenshot4.png](https://user-images.githubusercontent.com/23413000/50923892-09853f00-1474-11e9-9246-8edf553f392e.png)
 
 (***Note:*** If you have already trained your dataset and don't want to train it again, you can jump directly to step 3 by clicking "Go to Predict Page" in step 1)
 

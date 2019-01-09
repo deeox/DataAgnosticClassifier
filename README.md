@@ -1,4 +1,4 @@
-# Textimus Prime
+# Data-Agnostic Classifier for Dummies
 ___
 This is a ML application used to classify any text dataset into different labels. The app uses many text classifiers built into it and chooses the best classifier with the highest accuracy to train the models to predict the labels for the unlabelled data(user case).
 

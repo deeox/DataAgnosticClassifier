@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="/static/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/loading-btn.css"/>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DATASET UPLOAD</title>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='stylesheet_dataset.css') }}">
-
+    <style type="text/css">
+   body{margin:0;padding:0;}
+   .content{margin:0 auto;width:350px;font:13px/27px Arial,sans-serif;}
+   .content input, .content img{vertical-align:middle;margin-left:3px;}
+   .content .input_text{border:1px solid #ccc;height:18px;}
+   .subject {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<script type="text/javascript">
+   function getId(id) {
+       return document.getElementById(id);
+   }
+   function validation() {
+       getId("submit_btn").style.display="none";
+       getId("wait_tip").style.display="";
+       return true;
+   }
+</script>
 </head>
-<body bgcolor="hsl(0, 0%, 0%)">
+<body bgcolor="#231F20">
 
 
 
 <div class="container">
-    <form action="http://localhost:5000/train" method="POST" enctype='multipart/form-data'>
+    <form action="http://localhost:5000/train" method="POST" enctype='multipart/form-data' onsubmit="return validation();">
         <div class="container">
             <p>Data agnostic Classifier</p>
             <hr/>
@@ -43,7 +70,22 @@
             <hr/>
             <label>File: <input name="myFile" type="file"/></label>
             <input type="reset" value="Reset"/>
-            <input type="submit" value="OK"/>
+            <input type="submit" id="submit_btn" value="Train"/>
+
+        </div>
+    </form>
+</div>
+<center>
+<div class="subject">
+<span id="wait_tip" style="display:none;"><img src="static/loading.gif"
+           id="loading_img"/></span>
+</div>
+</center>
+<div class="container">
+    <form action="http://localhost:5000/connect">
+        <div class="row">
+            <label>Already trained your data? Click the button:</label>
+            <input type="submit" value="Go to Predict Page"/>
         </div>
     </form>
 </div>

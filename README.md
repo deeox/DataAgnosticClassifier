@@ -109,3 +109,4 @@ The loading screen appears till the models are trained.
 * **Deepak Divya Tejaswi**
 * **Nimit Kanani**
 * **Nitish Kumar Naineni**
+* **Arjun Dhar**
